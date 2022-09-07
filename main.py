@@ -9,7 +9,7 @@ import discord.utils
 import asyncio
 from webserver import keep_alive
 
-TOKEN = "ODY3NzIzODc1NDU4NzQ0MzMw.GumsIn.jOP9ghJH8bd3eZ3Hb6I7BLCZvzrA7VIWqawNlY"
+TOKEN = os.environ.get('TOKEN')
 
 a = "db!"
 
