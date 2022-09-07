@@ -224,7 +224,7 @@ async def link(ctx):
 
 @bot.command()
 async def info(ctx):
-    await ctx.send(embed = discord.Embed(title=f"Информация об Simbo:", description=f"Офф.сервер бота - **https://discord.gg/MVg9qy9g4e**\nРазработчик - " + "" + "**MrWoonWorld#8808**\nВсе команды - **simbo!help**"))
+    await ctx.send(embed = discord.Embed(title=f"Информация об Simbo:", description=f"Офф.сервер бота - **https://discord.gg/mBJnQZgg85**\nРазработчик - " + "" + "**MrWoonWorld#8808**\nВсе команды - **simbo!help**"))
 
 @bot.command()
 async def гдеТвойДруг(ctx):
