@@ -143,13 +143,13 @@ async def user(ctx,member:discord.Member = None, guild: discord.Guild = None):
         await ctx.send(embed = emb)
 
 @bot.command()
-async def goodby(ctx):
+async def goodbye(ctx):
     await ctx.message.delete()
     await ctx.send(embed=discord.Embed(title=ctx.author.name + " ушёл.", colour=discord.Color.red()))
 
 @bot.command()
 async def help(ctx): 
-    help1 = discord.Embed(title=f"Доступные команды:", description=f"\n**__:shield: Модерирование__**\n``simbo!ban <@пользователь>`` - забанить пользователя\n``simbo!mute <@пользователь> <время> <причина>`` - заглушить пользователя\n``simbo!unmute <@пользователь> <причина>`` - разглушить пользователя\n``simbo!kick <@пользователь>`` - кикнуть пользователя\n``simbo!warn <@пользователь>`` - выдать варн пользователю\n__(если бот не отвечает - у вас нету прав, либо он не смог найти пользователя)__\n\n**__:wrench: Утилиты__ **\n``simbo!addrole <@пользователь> <имя роли>`` - выдать роль пользователю\n``simbo!removerole <@пользователь> <имя роли>`` - забрать роль у пользователя\n``simbo!user <@пользователь>`` - информация об учаснике\n``simbo!clear <кол-во сообщений>`` - очистить чат\n\n**__:smile: Весёлое__**\n``simbo!cat`` - рандомное фото котика\n``simbo!popit`` - виртуальный поп-ит\n``simbo!hello`` - вывести сообщения о вашем появлении\n``simbo!goodby`` - вывести сообщения о вашем уходе\n``simbo!custom <действие>`` - РП действие\n\n**__:art: Дизайн__**\n``simbo!embed <текст>`` - выводит красивое сообщения в 'коробочке'\n``simbo!say <текст>`` - сказать что-то от имени бота\n\n**__:information_source: Информация__**\n``simbo!info`` - информация о боте\n``simbo!link`` - получить ссылку-приглашение бота себе на сервер",colour=discord.Color.blue())
+    help1 = discord.Embed(title=f"Доступные команды:", description=f"\n**__:shield: Модерирование__**\n``simbo!ban <@пользователь>`` - забанить пользователя\n``simbo!mute <@пользователь> <время> <причина>`` - заглушить пользователя\n``simbo!unmute <@пользователь> <причина>`` - разглушить пользователя\n``simbo!kick <@пользователь>`` - кикнуть пользователя\n``simbo!warn <@пользователь>`` - выдать варн пользователю\n__(если бот не отвечает - у вас нету прав, либо он не смог найти пользователя)__\n\n**__:wrench: Утилиты__ **\n``simbo!addrole <@пользователь> <имя роли>`` - выдать роль пользователю\n``simbo!removerole <@пользователь> <имя роли>`` - забрать роль у пользователя\n``simbo!user <@пользователь>`` - информация об учаснике\n``simbo!clear <кол-во сообщений>`` - очистить чат\n\n**__:smile: Весёлое__**\n``simbo!cat`` - рандомное фото котика\n``simbo!popit`` - виртуальный поп-ит\n``simbo!hello`` - вывести сообщения о вашем появлении\n``simbo!goodbye`` - вывести сообщения о вашем уходе\n``simbo!custom <действие>`` - РП действие\n\n**__:art: Дизайн__**\n``simbo!embed <текст>`` - выводит красивое сообщения в 'коробочке'\n``simbo!say <текст>`` - сказать что-то от имени бота\n\n**__:information_source: Информация__**\n``simbo!info`` - информация о боте\n``simbo!link`` - получить ссылку-приглашение бота себе на сервер",colour=discord.Color.blue())
     await ctx.channel.send(embed=help1)
 
 @bot.command()
