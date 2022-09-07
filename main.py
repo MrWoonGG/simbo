@@ -7,7 +7,6 @@ import random
 from discord.utils import *
 import discord.utils
 import asyncio
-from webserver import keep_alive
 
 TOKEN = os.environ.get('TOKEN')
 
@@ -375,7 +374,6 @@ async def on_command_error(ctx, error):
             f'{ctx.author.mention}, команда не найдена или введена неправильно!',
             colour=discord.Color.red()))
 
-keep_alive()
 try:
     bot.run(TOKEN)
 except discord.errors.HTTPException:
