@@ -8,7 +8,7 @@ from discord.utils import *
 import discord.utils
 import asyncio
 
-TOKEN = "ODY3NzIzODc1NDU4NzQ0MzMw.GWDzeZ.mxOgdXrKsxzAfhzYNV9voKU7Fclue08hpiLkAo"
+TOKEN = os.environ.get('TOKEN')
 
 a = "db!"
 
