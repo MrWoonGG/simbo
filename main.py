@@ -177,7 +177,7 @@ member = discord.Member
 @bot.comand()
 async def ball(ctx, *, q):
     f = random.choice(["Мой ответ: да", "Мой ответ: возможно", "Мой ответ: нет"])
-    ctx.send(embed=discord.Embed(title=f, colour=discord.Color.green()))
+    await message.reply(embed=discord.Embed(title=f, colour=discord.Color.green()))
 
 @bot.command()
 @commands.has_permissions(ban_members=True)
