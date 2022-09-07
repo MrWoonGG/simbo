@@ -1,3 +1,2 @@
 discord==1.7.3
 asyncio==3.4.3
-asyncio-timeout==3.0.1
