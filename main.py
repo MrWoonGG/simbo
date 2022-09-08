@@ -12,8 +12,7 @@ TOKEN = os.environ.get('TOKEN')
 
 a = "db!"
 d = "0"
-bot = command
-s.Bot(command_prefix="simbo!", intents=discord.Intents.all())
+bot = commands.Bot(command_prefix="simbo!", intents=discord.Intents.all())
 bot.remove_command('help')
 
 @bot.event  
