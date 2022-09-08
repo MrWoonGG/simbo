@@ -18,8 +18,11 @@ bot.remove_command('help')
 @bot.event  
 async def on_message(message):
     msg = message.content
-    if "Аля... Ты.... ДУРА" in message.content:
-        await message.channel.send("СЛЫШ ТЫ КУСОК ДЕРЬМА, ЕЩЁ РАЗ ОСКНЕШЬ АЛЕНЬКУ И ОТ ТВОЕГО ХУЯ ИЛИ ПИЗДЫ НИХУЯ НЕ ОСТАНЕТЬСЯ!")
+    if "https://" in message.content:
+        await message.channel.purge(limit = 1)
+        await message.channel.send("Нельзя писать сюда ссылки!")
+        asyncio.sleep(5)
+        await message.channel.delete()
 
 @bot.event
 async def on_ready():
