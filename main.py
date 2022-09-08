@@ -31,7 +31,7 @@ async def on_message(message):
             i+=1
     caps = '%.2f %%' % (100*(i/len(text)))
     if caps > len(message.content) / 2:
-        if d == "0"
+        if d == "0":
             message.channel.send("Пожалуйста, не используй так много капса!")
             d = "1"
             asyncio.sleep(15)
