@@ -29,7 +29,7 @@ async def on_message(message):
     for char in message.content:
         if char.isupper():
             i+=1
-    caps = '%.2f %%' % (100*(i/len(text))))
+    caps = '%.2f %%' % (100*(i/len(text)))
     if caps > len(message.content) / 2:
         if d == "0"
             message.channel.send("Пожалуйста, не используй так много капса!")
