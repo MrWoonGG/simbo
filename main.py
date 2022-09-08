@@ -15,29 +15,7 @@ d = "0"
 bot = commands.Bot(command_prefix="simbo!", intents=discord.Intents.all())
 bot.remove_command('help')
 
-@bot.event  
-async def on_message(message):
-    print("[LOG, server {message.guild.name}] {message.author.name}:{message.content}")
-    msg = message.content
-    if "https://discord" in message.content:
-        await message.channel.purge(limit = 1)
-        asyncio.sleep(5)
-    if "https://dsc" in msg:
-        await message.channel.purge(limit = 1)
-    i=0
-    for char in message.content:
-        if char.isupper():
-            i+=1
-    caps = '%.2f %%' % (100*(i/len(message.content)))
-    if caps > len(message.content) / 2:
-        if d == "0":
-            message.channel.send("Пожалуйста, не используй так много капса!")
-            d = "1"
-            asyncio.sleep(15)
-            d = "0"
-        if d == "1":
-            await message.channel.purge(limit = 1)
-            d = "0"
+
 
 
 @bot.event
