@@ -20,9 +20,9 @@ async def on_message(message):
     msg = message.content
     if "https://" in message.content:
         await message.channel.purge(limit = 1)
-        await message.channel.send("Нельзя писать сюда ссылки!")
+        msg = await message.channel.send("Нельзя писать сюда ссылки!")
         asyncio.sleep(5)
-        await message.channel.delete()
+        msg.delete()
 
 @bot.event
 async def on_ready():
